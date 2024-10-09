@@ -11,6 +11,6 @@ public class iPhone extends Telephone{
     public void print() {
         System.out.println("VipCode: "+ vipCode+
                 "\n Owner: "+ owner+
-                "\n IPhone: "+ getName());
+                "\n IPhone: "+ getName()) ;
     }
 }

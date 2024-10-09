@@ -17,12 +17,16 @@ public class Transport extends CarModel {
         return speed;
     }
 
-    public String getInfo(){
+    public String getInfo() {
         return super.getInfo() +
                 "\nName: " + name +
-                "\nSpeed: " + speed+
+                "\nSpeed: " + speed +
                 "\nLocation: " + getLocation();
 
 
+    }
+
+    public String getLocation() {
+        return super.getLocation();
     }
 }

@@ -1,31 +1,36 @@
 public class Main {
 
     public static Telephone createObject(String className) {
-        switch (className){
+        Telephone telephone = null;
+        switch (className) {
             case "2nd":
-                return new Samsung("Galaxy S24 Ultra","Samsung");
+                telephone =
+                 new Samsung("Galaxy S24 Ultra", "Samsung");
+                break;
 
-                case "3rd":
-                    return new Xiaomi("Xiaomi Mi Max","Black",123456);
-
-                    case "4th":
-                        return new iPhone("iPhone 15","Ularbek",1234567890);
+            case "3rd":
+                telephone =  new Xiaomi("Xiaomi Mi Max", "Black", 123456);
+                break;
+            case "4th":
+                telephone =  new iPhone("iPhone 15", "Ularbek", 1234567890);
+                break;
             default:
                 System.out.println("Invalid className");
-                return null;
 
         }
 
+        return telephone;
     }
+
     public static void main(String[] args) {
 
         Telephone samsung = createObject("2nd");
         Telephone xiaomi = createObject("3rd");
         Telephone iPhone = createObject("4th");
 
-        Telephone[] printable = {samsung, xiaomi, iPhone};
+        Telephone[] printable = {samsung, xiaomi, iPhone}; // 3
 
-        for(int i = 0; i < printable.length; i++){
+        for (int i = 0; i < printable.length; i++) {
             printable[i].print();
             System.out.println("--------------------");
             System.out.println();
@@ -39,13 +44,13 @@ public class Main {
 
         System.out.println("------------");
 
-        Transport transport = new Transport(2," Китай"," G80",Cartype.SEDAN, 2020, engine, " BMW", 300);
+        Transport transport = new Transport(2, " Китай", " G80", Cartype.SEDAN, 2020, engine, " BMW", 300);
         System.out.println(transport.getInfo());
         carModel.makeVoice();
         carModel.makeVoice("Paaap");
         System.out.println("------------");
 
-        Transport transport1 = new Transport(3," Япония"," G30",Cartype.SUV,2000, engine, " BMW",200);
+        Transport transport1 = new Transport(3, " Япония", " G30", Cartype.SUV, 2000, engine, " BMW", 200);
         System.out.println(transport1.getInfo());
         carModel.makeVoice();
         carModel.makeVoice("Piiip");

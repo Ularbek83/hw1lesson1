@@ -1,4 +1,4 @@
-public abstract class Telephone implements Printable {
+public abstract class Telephone  {
     private String name;
 
     public Telephone(String name) {
@@ -9,8 +9,6 @@ public abstract class Telephone implements Printable {
         return name;
     }
 
-    public void print() {
-        System.out.println("Name" + name);
-    }
+    abstract void print();
 
 }
